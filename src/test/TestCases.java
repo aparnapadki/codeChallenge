@@ -123,7 +123,7 @@ public class TestCases {
         concrete.addCommands(Commands.PUT_ON_FOOTWEAR);
         concrete.addCommands(Commands.LEAVE_HOUSE);
 
-        int index = checkCommands.findInvalidIndexValueIfItExists(concrete);
-        assertEquals(6, index);
+        boolean isValid = checkCommands.validate(concrete);
+        assertTrue(isValid);
     }
 }
