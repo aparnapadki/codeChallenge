@@ -54,11 +54,11 @@ public class WhatDoIWear {
 	
 	//Factory method taking the responsibility of calling appropriate implementation classes
 	private static ConcreteFactory createConcreteFactory() {
-        CheckFactory<Concrete> personValidationFactory = new CheckFactoryImpl();
-        ConvertNumericCmdToDesc personMapper = new ConvertNumericCmdToDesc();
-        ConvertTemperature temperatureProcessor = new ConvertTemperature();
+        CheckFactory<Concrete> checkFactory = new CheckFactoryImpl();
+        ConvertNumericCmdToDesc convertCommand = new ConvertNumericCmdToDesc();
+        ConvertTemperature convertTemp = new ConvertTemperature();
 
-        ConcreteFactory concreteFactory = new ConcreteFactoryImpl(personValidationFactory, personMapper, temperatureProcessor);
+        ConcreteFactory concreteFactory = new ConcreteFactoryImpl(checkFactory, convertCommand, convertTemp);
         return concreteFactory;
     }
 
