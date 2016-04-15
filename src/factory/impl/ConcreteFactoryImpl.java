@@ -29,7 +29,7 @@ public class ConcreteFactoryImpl implements ConcreteFactory {
 		Temperature temp = convertTemp.mapTemperature(temperature);
         Check<Concrete> checkedCommands = checkFactory.createValidations();
         Concrete concrete = new Concrete(temp, checkedCommands);
-        String[] actions = commands.split(",");
+        String[] actions = commands.split("\\s*,\\s*");
         convertCommand.convertNumericCmdToDesc(actions, concrete);
 
         return concrete;

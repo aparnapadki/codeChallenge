@@ -13,7 +13,7 @@ public class ConvertNumericCmdToDesc {
 	public void convertNumericCmdToDesc(String[] values, Concrete concrete) {
     	
         for (String action : values) {
-        	concrete.addCommands(Commands.getAction(Integer.valueOf(action)));
+        	concrete.addCommands(Commands.getAction(Integer.valueOf(action.trim())));
         }
         
     }

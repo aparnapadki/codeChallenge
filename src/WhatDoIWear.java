@@ -28,7 +28,7 @@ public class WhatDoIWear {
 
 	public static void main(String[] args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Please enter temperature type(HOT/COLD) and a comma separated list of commands (e.g HOT 8,6,4,2,1,7)");
+		System.out.println("Please enter temperature type(HOT/COLD) and a comma separated list(with no spaces after comma) of commands (e.g HOT 8,6,4,2,1,7)");
 		String temperature = "";
 		String commands = "";
 		try {
